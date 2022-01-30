@@ -21,8 +21,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://raw.githubusercontent.com/anders-wiggers/FoodPlanr/main/res/calendar.png">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/anders-wiggers/FoodPlanr">
+    <img src="https://raw.githubusercontent.com/anders-wiggers/FoodPlanr/main/res/calendar.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">MealPlanr</h3>
