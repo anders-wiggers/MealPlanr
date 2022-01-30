@@ -1,4 +1,4 @@
-# MealPlana 
+# MealPlanr
 
 <div id="top"></div>
 <!-- PROJECT SHIELDS -->
@@ -28,7 +28,7 @@
   <h3 align="center">MealPlanr</h3>
 
   <p align="center">
-    Food Planning made easy 🍏
+    Meal Planning made easy 🍏
     <br />
     <a href="https://github.com/anders-wiggers/FoodPlanr"><strong>Explore the docs »</strong></a>
     <br />
