@@ -1,17 +1,13 @@
 package v1
 
 import (
-	"fmt"
+	controllerV1 "src/controllers/v1"
 
 	"github.com/gin-gonic/gin"
 )
 
-func PrintTest(
-) {
-	fmt.Println("test")
-}
-
 //Initiate Routes for Version 1 of the API
 func InitRoutes(g *gin.RouterGroup){
-	
+	g.GET("/",controllerV1.DefaultResponse)	
 }
+
