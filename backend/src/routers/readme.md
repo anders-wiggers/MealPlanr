@@ -17,7 +17,7 @@ User consist of a user in the system
 
 `POST /user` creates aa user \
 `GET /user` with token provices user information \
-`UPDATE /user` changes user basic information
+`PATCH /user` changes user basic information
 
 # `user/recipes`
 
@@ -138,4 +138,16 @@ User consist of a user in the system
 ```
 
 `GET planner/shoppinglist` returns a shopping list for the week. \
-`UPDATE planner/shoppinglist` update a shopping list. \
+`PATCH planner/shoppinglist` update a shopping list. \
+
+
+# `login`
+
+```json
+{
+    "status":"succes",
+    "authToken":"5230-SF20b-&21c1-%8vs1x41sd"
+}
+```
+
+`login` given a username and password logs the userin and returns a token \
