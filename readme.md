@@ -67,7 +67,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-MealPlanr is an application dedicated to the trivial and boring task of meal planning 📅 and generating a shopping list 🛒.
+MealPlanr is an application dedicated to the trivial and boring task of planning meals 📅 and generating a shopping list 🛒.
 
 MealPlanr lets the user manage a list of recipes. The different recipes can then be designated to the days of the week. A shopping list with ingredients is then be generated for the users shopping trip and can be accessed via the Application making shopping easy. Can also potentially be integrated with online shopping
 
