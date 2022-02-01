@@ -5,7 +5,6 @@
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/anders-wiggers/MealPlanr?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/anders-wiggers/MealPlanr?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/anders-wiggers/mealplanr?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/anders-wiggers/MealPlanr?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues-raw/anders-wiggers/MealPlanr?style=for-the-badge)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555)](https://www.linkedin.com/in/anders-wiggers/)
 
