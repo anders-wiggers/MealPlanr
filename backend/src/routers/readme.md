@@ -6,7 +6,7 @@ Store information about All project routes
 
 # `User`
 
-User consist of a user in the system 
+User consist of a user in the system, the format of a user can be seen here:
 ```json
 {
     "name":"Baron Boss",
@@ -15,12 +15,93 @@ User consist of a user in the system
 }
 ```
 
-`POST /user` creates aa user \
-`GET /user` with token provices user information \
-`PATCH /user` changes user basic information
+---
+
+## `POST /user` 
+creates a new user in the system  user
+
+**I/O TO BE DETERMINDED**
+
+---
+## `GET /user` 
+with token provices user information
+
+`INPUT`
+```json
+[...]/user
+{
+    "bearerToken":"5230-SF20b-&21c1-%8vs1x41sd"
+}
+```
+
+`OUTPUT`
+```json
+{
+    "name":"Baron Boss",
+    "id":"100001",
+    "profilePicture":"http://linktoimg.com/10001.png",
+}
+```
+---
+## `PATCH /user` 
+changes user basic information
+
+`INPUT`
+```json
+[...]/user
+{
+    "bearerToken":"5230-SF20b-&21c1-%8vs1x41sd"
+}
+```
+
+`OUTPUT`
+```json
+{
+    "status":"succes"
+}
+```
+
 
 # `user/recipes`
 
+
+
+## `POST /user/recipes` 
+Create a new recipe
+
+`INPUT`
+```json
+[...]/user/recipe
+{
+    "id":"100001",
+    "bearerToken":"5230-SF20b-&21c1-%8vs1x41sd"
+}
+```
+
+`OUTPUT`
+```json
+{
+    "status":"succes"
+}
+
+
+`GET /user/recipes` Return all recipes of a user \
+
+```json
+{
+    "recipes": [
+        100001,
+        100002,
+        100003,
+        100005
+    ]
+}
+```
+
+## `GET /user/recipe?id=1000010` 
+Return a specific recipy
+
+`OUTPUT`
 ```json
 {
     "title":"Boiled Goose",
@@ -64,23 +145,26 @@ User consist of a user in the system
     ]
 }
 ```
+---
+## `DELETE /user/recipes` 
+Delete one or multiple recipes 
 
-`POST user/recipes` Create a new recipe \
-`GET user/recipes` Return all recipes of a user \
-
+`INPUT`
 ```json
+[...]/user/recipe
 {
-    "recipes": [
-        100001,
-        100002,
-        100003,
-        100005
-    ]
+    "id":"100001",
+    "bearerToken":"5230-SF20b-&21c1-%8vs1x41sd"
 }
 ```
 
-`GET user/recipe?id=1000010` Return a specific recipy \
-`DELETE user/recipes` Delete one or multiple recipes \
+`OUTPUT`
+```json
+{
+    "status":"succes"
+}
+```
+
 
 # `planner`
 
@@ -111,8 +195,8 @@ User consist of a user in the system
 }
 ```
 
-`GET planner` return a plan for a week \
-`POST planner` edit or upload a week plan \
+`GET /planner` return a plan for a week \
+`POST /planner` edit or upload a week plan \
 
 # `planner/shoppinglist`
 
@@ -137,17 +221,29 @@ User consist of a user in the system
 }
 ```
 
-`GET planner/shoppinglist` returns a shopping list for the week. \
-`PATCH planner/shoppinglist` update a shopping list. \
+`GET /planner/shoppinglist` returns a shopping list for the week. \
+`PATCH /planner/shoppinglist` update a shopping list. \
 
 
 # `login`
 
+
+## `POST /login` 
+given a username and password logs the user in and returns a token.
+
+`INPUT`
+```json
+[...]/login
+{
+    "username":"someusername",
+    "password":"somesecretpassword"
+}
+```
+
+`OUTPUT`
 ```json
 {
     "status":"succes",
     "authToken":"5230-SF20b-&21c1-%8vs1x41sd"
 }
 ```
-
-`login` given a username and password logs the userin and returns a token \
