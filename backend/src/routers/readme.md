@@ -340,7 +340,6 @@ given a username and password logs the user in and returns a token.
 
 `INPUT`
 ```json
-[...]/login
 {
     "username":"someusername",
     "password":"somesecretpassword"
