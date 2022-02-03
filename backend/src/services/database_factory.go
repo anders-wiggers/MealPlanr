@@ -5,6 +5,12 @@ import (
 	services "src/services/interface"
 )
 
+/*
+* 	Class responsible for creating the database
+*	factory which creates the different instaces
+*	of the database handlers
+ */
+
 // Strategy
 type databaseHandler struct {
 	DatabaseRequester services.DatabaseRequester
