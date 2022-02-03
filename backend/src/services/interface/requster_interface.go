@@ -1,19 +1,23 @@
 package services
 
+import (
+	"src/core/models"
+)
+
 // Interface for the Database requester
 type DatabaseRequester interface {
 	// Returns the type of database implemented
 	GetDatabaseType() string
 
 	// Return a user given the bearerToken
-	GetUser(string) struct{}
+	GetUser(string) models.User
 
 	// Updates a user given the bearerToken and stuct of info to update
-	UpdateUser(string, struct{}) string
+	UpdateUser(string, models.User) string
 
 	// Create a new recipe for a user with a bearerToken
-	CreateRecipe(string, string, struct{}) string
+	CreateRecipe(string, string, models.Recipe) string
 
 	// Get a recipe from an ID
-	GetRecipe(string) struct{}
+	GetRecipe(string) models.Recipe
 }
