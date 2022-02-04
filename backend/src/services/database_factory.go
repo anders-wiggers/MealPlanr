@@ -12,12 +12,12 @@ import (
  */
 
 // Strategy
-type databaseHandler struct {
+type DatabaseHandler struct {
 	DatabaseRequester services.DatabaseRequester
 }
 
-func DatabaseFactory() databaseHandler {
-	return databaseHandler{
+func DatabaseFactory() DatabaseHandler {
+	return DatabaseHandler{
 		DatabaseRequester: &db.DatabaseStub{},
 	}
 }

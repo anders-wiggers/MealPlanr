@@ -15,7 +15,7 @@ func InitRoutes(g *gin.RouterGroup) {
 	routes := routers.NewStaticRoutes()
 
 	// User routes
-	g.GET(routes.UserRoute, controllerV1.DefaultResponse)
+	g.GET(routes.UserRoute, controllerV1.LookUpUser)
 	g.POST(routes.UserRoute, controllerV1.DefaultResponse)
 	g.PATCH(routes.UserRoute, controllerV1.DefaultResponse)
 

@@ -5,14 +5,14 @@ package models
  */
 
 type User struct {
-	name           string
-	id             string
-	profilePicture string
+	Name           string `json:"name" binding:"required"`
+	Id             string `json:"id" binding:"required"`
+	ProfilePicture string `json:"profilePicture" binding:"required"`
 }
 
 func NewUser(name string, id string, profilePicture string) (user User) {
-	user.name = name
-	user.id = id
-	user.profilePicture = profilePicture
+	user.Name = name
+	user.Id = id
+	user.ProfilePicture = profilePicture
 	return user
 }
