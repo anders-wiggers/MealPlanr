@@ -21,7 +21,7 @@ func LookUpUser(c *gin.Context){
 		fmt.Println(bearerToken)
 		c.IndentedJSON(http.StatusOK,user)
 	} else {
-		c.IndentedJSON(http.StatusUnauthorized,"no :)")
+		c.HTML(http.StatusUnauthorized,"badaction.html",nil)
 	}
 	
 }

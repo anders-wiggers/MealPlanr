@@ -16,9 +16,15 @@ var router *gin.Engine
 // Inint database
 // Setup routing
 func init() {
+	// Init database
 	services.GetDatabase()
+
+	// Setup GIN
 	router = gin.New()
 	version1 := router.Group("/v1")
+
+	// Load Static HTML
+	router.LoadHTMLGlob("static/**/*.html")
 	routersV1.InitRoutes(version1)
 }
 
