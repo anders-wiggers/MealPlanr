@@ -26,11 +26,9 @@ creates a new user in the system  user
 ## `GET /user` 
 with token provices user information
 
-`BODY`
-```json
-{
-    "bearerToken":"5230-SF20b-&21c1-%8vs1x41sd"
-}
+`HEADER`
+```shell
+bearerToken: 5230-SF20b-&21c1-%8vs1x41sd
 ```
 
 `OUTPUT`
@@ -45,10 +43,13 @@ with token provices user information
 ## `PATCH /user` 
 changes user basic information
 
+`HEADER`
+```shell
+bearerToken: 5230-SF20b-&21c1-%8vs1x41sd
+```
 `BODY`
 ```json
 {
-    "bearerToken":"5230-SF20b-&21c1-%8vs1x41sd",
     "InfoToChange":"NewInformation"
 }
 ```
@@ -68,11 +69,16 @@ changes user basic information
 ## `POST /user/recipes` 
 Create a new recipe for user given a bearerToken
 
+`HEADER`
+```shell
+bearerToken: 5230-SF20b-&21c1-%8vs1x41sd
+```
+
+
 `BODY`
 ```json
 {
     "id":"100001-10",
-    "bearerToken":"5230-SF20b-&21c1-%8vs1x41sd",
     "recipe": {
         "title":"Boiled Goose",
         "uid":"100001-10",
@@ -191,11 +197,15 @@ Return a specific recipe
 ## `DELETE /user/recipes` 
 Delete one or multiple recipes 
 
+`HEADER`
+```shell
+bearerToken: 5230-SF20b-&21c1-%8vs1x41sd
+```
+
 `INPUT`
 ```json
 {
     "id":"100001-10",
-    "bearerToken":"5230-SF20b-&21c1-%8vs1x41sd"
 }
 ```
 
@@ -214,6 +224,10 @@ Delete one or multiple recipes
 ## `GET /planner` 
 Return a plan for a week 
 
+`HEADER`
+```shell
+bearerToken: 5230-SF20b-&21c1-%8vs1x41sd
+```
 
 `OUTPUT`
 ```json 
@@ -246,10 +260,14 @@ Return a plan for a week
 ## `POST /planner` 
 Edit or upload a week plan 
 
+`HEADER`
+```shell
+bearerToken: 5230-SF20b-&21c1-%8vs1x41sd
+```
+
 `INPUT`
 ```json
 {
-    "bearerToken":"5230-SF20b-&21c1-%8vs1x41sd",
     "week":"1",
     "year":"2022",
     "days":{
@@ -313,6 +331,12 @@ Returns a shopping list for the week.
 
 ## `PATCH /planner/shoppinglist` 
 update a shopping list.
+
+`HEADER`
+```shell
+bearerToken: 5230-SF20b-&21c1-%8vs1x41sd
+```
+
 `INPUT`
 ```json
 {
