@@ -20,4 +20,7 @@ type DatabaseRequester interface {
 
 	// Get a recipe from an ID
 	GetRecipe(string) models.Recipe
+
+	// Verify the validity of a bearerToken
+	VerifyBearerToken(string) bool
 }

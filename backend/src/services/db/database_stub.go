@@ -32,3 +32,7 @@ func (databaseStub DatabaseStub) CreateRecipe(string, string, models.Recipe) str
 func (databaseStub DatabaseStub) GetRecipe(string) models.Recipe {
 	return models.NewRecipe()
 }
+
+func (databaseStub DatabaseStub) VerifyBearerToken(string) bool {
+	return true
+}
