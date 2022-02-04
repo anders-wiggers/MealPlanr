@@ -14,6 +14,7 @@ func DefaultResponse(c *gin.Context){
 
 func LookUpUser(c *gin.Context){
 	//Check Do DB lookup for bearerToken to string
+	// TODO: IMPORTANT FIX DATABASE IMPORT 
 	test := services.DatabaseFactory()	
 	bearerToken := c.GetHeader("bearerToken")
 	if ValidateBearerToken(bearerToken) {
