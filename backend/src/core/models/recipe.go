@@ -5,15 +5,15 @@ package models
  */
 
 type Recipe struct {
-	title       string
-	uid         string
-	date        string
-	author      string
-	basicInfo   basicRecipeInfo
-	coverImage  string
-	ingredients []ingredientsStuct
-	nutrition   nutritionStruct
-	Method      []string
+	Title       string             `json:"title" binding:"required"`
+	Uid         string             `json:"uid" binding:"required"`
+	Date        string             `json:"date" binding:"required"`
+	Author      string             `json:"author" binding:"required"`
+	BasicInfo   basicRecipeInfo    `json:"basic_info" binding:"required"`
+	CoverImage  string             `json:"cover_image" binding:"required"`
+	Ingredients []ingredientsStuct `json:"ingredients" binding:"required"`
+	Nutrition   nutritionStruct    `json:"nutritions" binding:"required"`
+	Method      []string           `json:"method" binding:"required"`
 }
 
 func NewRecipe() (recipe Recipe) {
@@ -22,24 +22,24 @@ func NewRecipe() (recipe Recipe) {
 
 // Helper data structures
 type basicRecipeInfo struct {
-	prebTime   string
-	cookTime   string
-	difficulty string
+	PrebTime   string
+	CookTime   string
+	Difficulty string
 }
 
 type ingredientsStuct struct {
-	name         string
-	amount       string
-	purchaseable bool
+	Name         string
+	Amount       string
+	Purchaseable bool
 }
 
 type nutritionStruct struct {
-	kcal      string
-	fat       string
-	saturates string
-	carbs     string
-	sugars    string
-	fibre     string
-	protein   string
-	salt      string
+	Kcal      string
+	Fat       string
+	Saturates string
+	Carbs     string
+	Sugars    string
+	Fibre     string
+	Protein   string
+	Salt      string
 }

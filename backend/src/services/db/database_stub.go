@@ -29,8 +29,12 @@ func (databaseStub DatabaseStub) CreateRecipe(string, string, models.Recipe) str
 	return "succes"
 }
 
-func (databaseStub DatabaseStub) GetRecipe(string) models.Recipe {
-	return models.NewRecipe()
+func (databaseStub DatabaseStub) GetRecipe(id string) models.Recipe {
+	var standartRecipe = models.NewRecipe()
+	standartRecipe.Title = "Boiled Goose"
+	standartRecipe.Uid = id
+
+	return standartRecipe
 }
 
 func (databaseStub DatabaseStub) VerifyBearerToken(bearerToken string) bool {
@@ -39,4 +43,8 @@ func (databaseStub DatabaseStub) VerifyBearerToken(bearerToken string) bool {
 	} else {
 		return false
 	}
+}
+
+func (databaseStub DatabaseStub) DeleteRecipe(string, string) string {
+	return "succes"
 }

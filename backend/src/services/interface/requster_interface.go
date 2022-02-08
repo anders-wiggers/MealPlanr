@@ -18,6 +18,9 @@ type DatabaseRequester interface {
 	// Create a new recipe for a user with a bearerToken
 	CreateRecipe(string, string, models.Recipe) string
 
+	// Delete a recipe given the users bearerToken
+	DeleteRecipe(string, string) string
+
 	// Get a recipe from an ID
 	GetRecipe(string) models.Recipe
 
