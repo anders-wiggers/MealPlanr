@@ -33,6 +33,10 @@ func (databaseStub DatabaseStub) GetRecipe(string) models.Recipe {
 	return models.NewRecipe()
 }
 
-func (databaseStub DatabaseStub) VerifyBearerToken(string) bool {
-	return true
+func (databaseStub DatabaseStub) VerifyBearerToken(bearerToken string) bool {
+	if bearerToken == "5230-SF20b-&21c1-%8vs1x41sd" {
+		return true
+	} else {
+		return false
+	}
 }

@@ -16,8 +16,18 @@ type DatabaseHandler struct {
 	DatabaseRequester services.DatabaseRequester
 }
 
-func DatabaseFactory() DatabaseHandler {
-	return DatabaseHandler{
+func DatabaseFactory() *DatabaseHandler {
+	return &DatabaseHandler{
 		DatabaseRequester: &db.DatabaseStub{},
 	}
+}
+
+var database *DatabaseHandler
+
+// Singleton pattern to return a database instance
+func GetDatabaseInstance() *DatabaseHandler {
+	if database == nil {
+		database = DatabaseFactory()
+	}
+	return database
 }
