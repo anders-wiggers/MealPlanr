@@ -22,5 +22,16 @@ func LookUpUser(c *gin.Context) {
 	} else {
 		c.HTML(http.StatusUnauthorized, "badaction.html", nil)
 	}
+}
+
+func GetRecipe(c *gin.Context) {
+
+}
+
+func DeleteRecipe(c *gin.Context) {
+
+}
+
+func UploadRecipes(c *gin.Context) {
 
 }
