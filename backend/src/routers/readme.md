@@ -78,48 +78,43 @@ bearerToken: 5230-SF20b-&21c1-%8vs1x41sd
 `BODY`
 ```json
 {
-    "id":"100001-10",
-    "recipe": {
-        "title":"Boiled Goose",
-        "uid":"100001-10",
-        "date":"22-12-2022",
-        "author":"Anders Wiggers",
-        "basicInfo": {
-            "prebTime":"10 mins",
-            "cook":"25 mins",
-            "difficulty":"Easy",
+    "title": "Boiled Goose",
+    "uid": "1000010",
+    "date": "22-12-2022",
+    "author": "Anders Wiggers",
+    "basic_info": {
+        "prebTime": "10 mins",
+        "cook": "25 mins",
+        "difficulty": "Easy"
+    },
+    "cover_image": "http://linktoimg.com/10001.png",
+    "ingredients": [
+        {
+            "name": "Goose",
+            "amount": "2000kg",
+            "purchasable": true
         },
-        "coverImage":"http://linktoimg.com/10001.png",
-        "ingredients":[
-            {
-                "Goose": {
-                    "amount":"2000kg",
-                    "purchasable":true
-                }
-            },
-            {
-                "Water": {
-                    "amount":"200ml",
-                    "purchasable":false
-                }
-            }
-        ],
-        "Nutrition":{
-            "kcal":"100",
-            "fat":"12g",
-            "saturates":"4g",
-            "carbs":"100g",
-            "sugars":"0g",
-            "fibre":"3g",
-            "protein":"20g",
-            "salt":"0.5g"
-        } ,
-        "Method":[
-            "warm water",
-            "put goose in water",
-            "take goose out of water"
-        ]
-    }
+        {
+            "name": "water",
+            "amount": "200ml",
+            "purchasable": false
+        }
+    ],
+    "nutritions": {
+        "kcal": "100",
+        "fat": "12g",
+        "saturates": "4g",
+        "carbs": "100g",
+        "sugars": "0g",
+        "fibre": "3g",
+        "protein": "20g",
+        "salt": "0.5g"
+    },
+    "method": [
+        "warm water",
+        "put goose in water",
+        "take goose out of water"
+    ]
 }
 ```
 

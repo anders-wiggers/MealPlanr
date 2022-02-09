@@ -9,10 +9,10 @@ type Recipe struct {
 	Uid         string             `json:"uid" binding:"required"`
 	Date        string             `json:"date" binding:"required"`
 	Author      string             `json:"author" binding:"required"`
-	BasicInfo   basicRecipeInfo    `json:"basic_info" binding:"required"`
+	BasicInfo   BasicRecipeInfo    `json:"basic_info" binding:"required"`
 	CoverImage  string             `json:"cover_image" binding:"required"`
-	Ingredients []ingredientsStuct `json:"ingredients" binding:"required"`
-	Nutrition   nutritionStruct    `json:"nutritions" binding:"required"`
+	Ingredients []IngredientsStuct `json:"ingredients" binding:"required"`
+	Nutrition   NutritionStruct    `json:"nutritions" binding:"required"`
 	Method      []string           `json:"method" binding:"required"`
 }
 
@@ -21,25 +21,25 @@ func NewRecipe() (recipe Recipe) {
 }
 
 // Helper data structures
-type basicRecipeInfo struct {
-	PrebTime   string
-	CookTime   string
-	Difficulty string
+type BasicRecipeInfo struct {
+	PrebTime   string `json:"prebTime" binding:"required"`
+	CookTime   string `json:"cook" binding:"required"`
+	Difficulty string `json:"difficulty" binding:"required"`
 }
 
-type ingredientsStuct struct {
-	Name         string
-	Amount       string
-	Purchaseable bool
+type IngredientsStuct struct {
+	Name         string `json:"name" binding:"required"`
+	Amount       string `json:"amount" binding:"required"`
+	Purchaseable bool   `json:"purchasable" binding:"required"`
 }
 
-type nutritionStruct struct {
-	Kcal      string
-	Fat       string
-	Saturates string
-	Carbs     string
-	Sugars    string
-	Fibre     string
-	Protein   string
-	Salt      string
+type NutritionStruct struct {
+	Kcal      string `json:"kcal" binding:"required"`
+	Fat       string `json:"fat" binding:"required"`
+	Saturates string `json:"saturates" binding:"required"`
+	Carbs     string `json:"carbs" binding:"required"`
+	Sugars    string `json:"sugars" binding:"required"`
+	Fibre     string `json:"fibre" binding:"required"`
+	Protein   string `json:"protein" binding:"required"`
+	Salt      string `json:"salt" binding:"required"`
 }

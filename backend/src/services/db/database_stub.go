@@ -33,6 +33,24 @@ func (databaseStub DatabaseStub) GetRecipe(id string) models.Recipe {
 	var standartRecipe = models.NewRecipe()
 	standartRecipe.Title = "Boiled Goose"
 	standartRecipe.Uid = id
+	standartRecipe.Date = "22-12-2022"
+	standartRecipe.Author = "Anders Wiggers"
+	standartRecipe.BasicInfo = models.BasicRecipeInfo{"10 mins", "25 mins", "Easy"}
+	standartRecipe.CoverImage = "http://linktoimg.com/10001.png"
+
+	var goose = models.IngredientsStuct{"Goose", "2000kg", true}
+	var water = models.IngredientsStuct{"water", "200ml", false}
+	var ingredientSlice = []models.IngredientsStuct{}
+	ingredientSlice = append(ingredientSlice, goose)
+	ingredientSlice = append(ingredientSlice, water)
+
+	standartRecipe.Ingredients = ingredientSlice
+
+	standartRecipe.Nutrition = models.NutritionStruct{"100", "12g", "4g", "100g", "0g", "3g", "20g", "0.5g"}
+
+	standartRecipe.Method = append(standartRecipe.Method, "warm water")
+	standartRecipe.Method = append(standartRecipe.Method, "put goose in water")
+	standartRecipe.Method = append(standartRecipe.Method, "take goose out of water")
 
 	return standartRecipe
 }
