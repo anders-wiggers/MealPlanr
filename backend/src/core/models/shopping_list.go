@@ -5,7 +5,7 @@ package models
  */
 
 type ShoppingList struct {
-	list []item
+	List []Item `json:"list" binding:"required"`
 }
 
 func NewShoppingList() (shoppingList ShoppingList) {
@@ -13,8 +13,8 @@ func NewShoppingList() (shoppingList ShoppingList) {
 }
 
 // Helper structs
-type item struct {
-	name    string
-	amount  string
-	checked bool
+type Item struct {
+	Name    string `json:"name" binding:"required"`
+	Amount  string `json:"amount" binding:"required"`
+	Checked bool   `json:"checked" binding:"required"`
 }
